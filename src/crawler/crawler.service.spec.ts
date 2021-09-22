@@ -32,7 +32,7 @@ describe('CrawlerService', () => {
 
   it('should be able scrape', async () => {
     const url = `${BASE_URL}/shimakaze.html`;
-    const result = await service.scrape(url, {
+    const result = await service.crawl(url, {
       boteName: {
         selector: '#firstHeading',
         how: 'text',
