@@ -1,0 +1,15 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Ship {
+  id: Int!
+  avatarUrl: String
+  artUrl: String
+  name: String
+  faction: String
+}
+
+type Query {
+  ship: Ship!
+}
