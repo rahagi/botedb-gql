@@ -2,14 +2,94 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Illustrator {
+  name: String
+  socials: [String!]
+}
+
+type Skill {
+  name: String
+  skillType: SkillType
+  description: String
+}
+
+enum SkillType {
+  OFFENSIVE
+  SUPPORT
+  DEFENSIVE
+}
+
+type Stats {
+  statsLvl: StatsLvl
+  hp: Float
+  fp: Float
+  trp: Float
+  avi: Float
+  aa: Float
+  rld: Float
+  eva: Float
+  armorType: ArmorType
+  spd: Float
+  acc: Float
+  lck: Float
+  asw: Float
+  oil: Float
+}
+
+enum StatsLvl {
+  BASE
+  _100
+  _100_RETROFIT
+  _120
+  _120_RETROFIT
+}
+
+enum ArmorType {
+  LIGHT
+  MEDIUM
+  HEAVY
+}
+
+type VoiceActor {
+  name: String
+  oggSamples: [String!]
+}
+
 type Ship {
-  id: Int!
+  name: String
   avatarUrl: String
   artUrl: String
-  name: String
+  artRetrofitUrl: String
+  jpName: String
+  westTwName: String
+  fullName: String
+  shipType: ShipType
+  rarity: Rarity
+  class: String
   faction: String
+  stats: [Stats!]
+  skill: Skill
+  voiceActor: VoiceActor
+  illustrator: Illustrator
+}
+
+enum ShipType {
+  STANDARD
+  RESEARCH
+  META
+  COLLAB
+}
+
+enum Rarity {
+  N
+  R
+  SR
+  SSR
+  UR
+  PR
+  DR
 }
 
 type Query {
-  ship: Ship!
+  ship(name: String!): Ship!
 }
