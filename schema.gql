@@ -63,7 +63,6 @@ type Ship {
   jpName: String
   westTwName: String
   fullName: String
-  shipType: ShipType
   rarity: Rarity
   class: String
   faction: String
@@ -71,13 +70,6 @@ type Ship {
   skill: Skill
   voiceActor: VoiceActor
   illustrator: Illustrator
-}
-
-enum ShipType {
-  STANDARD
-  RESEARCH
-  META
-  COLLAB
 }
 
 enum Rarity {
