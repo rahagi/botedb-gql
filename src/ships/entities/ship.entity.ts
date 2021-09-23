@@ -1,6 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql';
 import { Rarity } from 'src/common/enums/rarity.enum';
-import { ShipType } from 'src/common/enums/shiptype.enum';
 import { Illustrator } from './illustrator.entity ';
 import { Skill } from './skill.entity';
 import { Stats } from './stats.entity';
@@ -29,9 +28,6 @@ export class Ship {
   @Field({ nullable: true })
   fullName: string;
 
-  @Field(() => ShipType, { nullable: true })
-  shipType: ShipType;
-
   @Field(() => Rarity, { nullable: true })
   rarity: Rarity;
 
@@ -44,8 +40,8 @@ export class Ship {
   @Field(() => [Stats], { nullable: true })
   stats: [Stats];
 
-  @Field(() => Skill, { nullable: true })
-  skill: Skill;
+  @Field(() => [Skill], { nullable: true })
+  skills: [Skill];
 
   @Field(() => VoiceActor, { nullable: true })
   voiceActor: VoiceActor;

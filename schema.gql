@@ -67,7 +67,7 @@ type Ship {
   class: String
   faction: String
   stats: [Stats!]
-  skill: Skill
+  skills: [Skill!]
   voiceActor: VoiceActor
   illustrator: Illustrator
 }
@@ -84,4 +84,5 @@ enum Rarity {
 
 type Query {
   ship(name: String!): Ship!
+  ships: [Ship!]!
 }
