@@ -8,7 +8,10 @@ const cache: ISetupCache = setupCache({
 
 const request: AxiosInstance = axios.create({
   adapter: cache.adapter,
-  headers: { 'User-Agent': 'botedb-gql-crawler' },
+  headers: {
+    'User-Agent': 'botedb-gql-crawler',
+    'Content-Type': 'charset=utf-8',
+  },
 });
 
 export default request;

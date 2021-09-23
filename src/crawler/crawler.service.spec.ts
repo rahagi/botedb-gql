@@ -5,15 +5,11 @@ import { CrawlerService } from './crawler.service';
 
 const BASE_URL: string = join(__dirname, '../common/fixtures');
 
-jest.mock('../common/lib/request', () => {
-  return {
-    default: {
-      get: jest.fn((url) =>
-        Promise.resolve({ data: String(readFileSync(url)) }),
-      ),
-    },
-  };
-});
+jest.mock('../common/lib/request.lib', () => ({
+  default: {
+    get: jest.fn((url) => Promise.resolve({ data: String(readFileSync(url)) })),
+  },
+}));
 
 describe('CrawlerService', () => {
   let service: CrawlerService;
@@ -31,7 +27,7 @@ describe('CrawlerService', () => {
   });
 
   it('should be able scrape', async () => {
-    const url = `${BASE_URL}/shimakaze.html`;
+    const url = `${BASE_URL}/Shimakaze.html`;
     const result = await service.crawl(url, {
       boteName: {
         selector: '#firstHeading',
