@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ScrapeOptions } from 'scrape-it';
-import { getFullSizeArt } from '../common/helpers/url';
-import { toTitleCase } from '../common/helpers/string';
+import { getFullSizeArt } from '../common/helpers/url.helper';
+import { toTitleCase } from '../common/helpers/string.helper';
 import { CrawlerService } from '../crawler/crawler.service';
 import { Illustrator } from './entities/illustrator.entity ';
 import { Ship } from './entities/ship.entity';
