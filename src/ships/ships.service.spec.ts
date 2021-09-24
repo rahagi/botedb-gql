@@ -49,6 +49,7 @@ describe('ShipsService', () => {
 
   it('should be able to get all ships', async () => {
     const result: Ship[] = await service.getShips();
+    console.log(result);
 
     expect(result).toBeTruthy();
   });
