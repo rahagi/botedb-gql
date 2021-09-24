@@ -1,10 +1,10 @@
 {
   "name": "botedb-gql",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Azur Lane ship data served as GraphQL API",
   "author": "",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "GPLv3",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
