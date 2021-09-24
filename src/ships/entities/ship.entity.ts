@@ -1,5 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { Rarity } from 'src/common/enums/rarity.enum';
+import { Rarity } from '../../common/enums/rarity.enum';
 import { Illustrator } from './illustrator.entity ';
 import { Skill } from './skill.entity';
 import { Stats } from './stats.entity';

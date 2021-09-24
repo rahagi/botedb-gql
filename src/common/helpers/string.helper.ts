@@ -10,5 +10,5 @@ export const normalizeRarityNum = (n: string): string => {
   const rarityIndex = Number(n);
   if (isNaN(rarityIndex)) return 'Normal';
   const rarityMap = Object.values(Rarity);
-  return rarityMap[Number(n) - 2];
+  return rarityMap[rarityIndex - 2];
 };

@@ -1,6 +1,6 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { ArmorType } from 'src/common/enums/armortype.enum';
-import { StatsLvl } from 'src/common/enums/statslvl.enum';
+import { ArmorType } from '../../common/enums/armortype.enum';
+import { StatsLvl } from '../../common/enums/statslvl.enum';
 
 @ObjectType()
 export class Stats {

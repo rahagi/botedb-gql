@@ -1,5 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { SkillType } from 'src/common/enums/skilltype.enum';
+import { SkillType } from '../../common/enums/skilltype.enum';
 
 @ObjectType()
 export class Skill {
