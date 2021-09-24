@@ -11,7 +11,7 @@ This repo is used for learning purposes.
 
 # botedb-gql
 
-![GraphQL Playground](playground.png)
+![GraphQL Playground](https://raw.githubusercontent.com/rahagi/botedb-gql/master/docs/playground.png)
 
 Azur Lane ship data served as GraphQL API. All of the data are fetched from [Azur Lane Wiki](https://azurlane.koumakan.jp/Azur_Lane_Wiki).
 
